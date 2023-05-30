@@ -3,13 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/Model_worker.php</file>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/WorkerController.php</file>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/Size_worker.php</file>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/Size.php</file>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/routes/web.php</file>
-            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/ModelBoot.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/config/cors.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Kernel.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/AuthController.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/.env</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/ApiAuthController.php</file>
             <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/ModelController.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/AdminsController.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/User.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/routes/api.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Middleware/Authenticate.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Controllers/UserController.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/routes/web.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Middleware/EnsureAdminConfirmation.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Models/Admin.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/config/auth.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/config/jwt.php</file>
+            <file>file:/C:/wamp64/www/assembling-shoes-control/server-side-assembling-shoes-control/app/Http/Middleware/JwtMiddleware.php</file>
         </group>
     </open-files>
 </project-private>

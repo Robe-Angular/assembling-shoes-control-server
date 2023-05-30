@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Http\Request;
 
 class EnsureAdminConfirmation
@@ -16,7 +17,7 @@ class EnsureAdminConfirmation
      */
     public function handle(Request $request, Closure $next)
     {
-        $admin_confirmation = $request->user()->email_verified_at;
+        $admin_confirmation = auth()->user()->email_verified_at;
         
         if(!$admin_confirmation){
             return response()->json([   

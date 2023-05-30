@@ -5,23 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth;
+use Tymon\JWTAuth\Facades\JWTAuth;
 use App\Models\User;
 use App\Models\Admin;
 use App\Http\Helper;
 
 class ApiAuthController extends Controller
 {
-    public function attempt($params_array){
-        if(!Auth::attempt($params_array)){
-            if(!Auth::guard('admin')->attempt($params_array)){
-                return response()->json([
-                    'message' => 'invalid login details'
-                ],401);
-            }            
-        }
-        return true;
-    }
+    
 
 
     public function register(Request $request){
@@ -69,7 +60,7 @@ class ApiAuthController extends Controller
     }
     
     
-    
+    /*
     public function login(Request $request){
         $params = Helper::get_params($request);
         $params_array = (array) $params;
@@ -97,12 +88,9 @@ class ApiAuthController extends Controller
             'user_role' => $user_role
         ]);
     }
-    
+    */
     public function logout(Request $request){
-         $request->session()->invalidate();
-         Auth::logout();
- 
-        $request->session()->regenerateToken();
+        auth()->logout();
         return response()->json([
             'message' =>'success'
         ]);

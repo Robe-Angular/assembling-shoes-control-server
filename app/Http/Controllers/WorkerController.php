@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Tymon\JWTAuth\Facades\JWTAuth;
 use Illuminate\Http\Request;
 use App\Models\Worker;
 use App\Models\ModelBoot;
@@ -22,7 +23,7 @@ class WorkerController extends Controller
         $params = Helper::get_params($request);
         $params_array = (array) $params;
         
-        $manager_id = $request->user()->id;
+        $manager_id = auth()->user()->id;
         $new_worker = Worker::create([
            'name' => $params->name,
            'creator' => $manager_id

@@ -8,7 +8,7 @@ use App\Models\Size;
 use App\Models\Model_worker;
 use App\Models\Size_worker;
 use App\Models\Size_Order;
-
+use Tymon\JWTAuth\Facades\JWTAuth;
 use App\Models\Order;
 use App\Http\Helper;
 
@@ -42,7 +42,7 @@ class ModelController extends Controller
         $params = Helper::get_params($request);
         $params_array = (array) $params;
         
-        $manager_id = $request->user()->id;
+        $manager_id = auth()->user()->id;
         $new_model = ModelBoot::create([
             'title' => $params->title,
             'features' => $params->features,
@@ -96,7 +96,7 @@ class ModelController extends Controller
         $sizes_input = Helper::get_params($request);
         $params_array = (array) $sizes_input;
         $models_boot_id = array_unique(array_column($sizes_input,'modelId'));
-        $manager_id = $request->user()->id;
+        $manager_id = auth()->user()->id;
         
         //Check already model_worker
         foreach ($models_boot_id as $model_boot_id){

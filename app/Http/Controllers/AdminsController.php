@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\Admin;
 use App\Models\User;
+use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AdminsController extends Controller
 {
     public function allow_register(Request $request,$allow_register){
         
-        $admin = $request->user();
+        $admin = auth()->user();
         $admin_id = $admin->id;
         $int_allow_register = (int)($allow_register === 'true');
         
@@ -31,7 +32,7 @@ class AdminsController extends Controller
     }
     public function index(Request $request){
         return response()->json([
-            'manager' => $request->user()
+            'manager' => auth()->user()
         ]);
     }
     

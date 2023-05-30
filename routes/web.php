@@ -18,11 +18,11 @@ use App\Http\Middleware\EnsureAdminConfirmation;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/login', 'ApiAuthController@login');
+Route::post('/login', 'AuthController@login');
 Route::post('/register', 'ApiAuthController@register');
-Route::get('/logout', 'ApiAuthController@logout');
+//Route::get('/logout', 'ApiAuthController@logout');
 
-Route::middleware('auth:user')->group(function(){
+Route::middleware(['assign.guard:user'])->group(function(){
    Route::get('/user','UserController@index');
    Route::middleware(EnsureAdminConfirmation::class)->group(function(){
        Route::get('/verified','UserController@verifies');
@@ -48,7 +48,7 @@ Route::middleware('auth:user')->group(function(){
 });
 
 
-Route::middleware('auth:admin')->group(function(){
+Route::middleware(['assign.guard:admin'])->group(function(){
    Route::get('/admin','AdminsController@index');
    Route::get('/admin/allow_register/{allow_register}','AdminsController@allow_register');
    Route::get('/admin/users-not-verified','AdminsController@get_users_not_verified');
